@@ -1,5 +1,7 @@
 # GreatiOSJailbreakMaterial - Only List the Most Useful Materials Here!
 
+twitter@ http://twitter.com/Flyic
+
 twitter@ http://twitter.com/SparkZheng
 
 weibo@ http://weibo.com/zhengmin1989
