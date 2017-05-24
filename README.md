@@ -53,7 +53,7 @@ https://github.com/xairy/linux-kernel-exploitation
 
 # JavaScript
 ## Security
-a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
+* a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
 
 Keep updating...please follow, thanks.
 
