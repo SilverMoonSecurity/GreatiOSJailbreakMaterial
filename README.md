@@ -51,6 +51,9 @@ https://zhuanlan.zhihu.com/p/25261296
 ## Linux kernel exploit
 https://github.com/xairy/linux-kernel-exploitation
 
+# JavaScript
+## Security
+a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
 
 Keep updating...please follow, thanks.
 
