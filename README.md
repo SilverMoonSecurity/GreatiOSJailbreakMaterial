@@ -6,7 +6,7 @@ twitter@ http://twitter.com/SparkZheng
 
 weibo@ http://weibo.com/zhengmin1989
 
-## Projects:
+## Jail Break Projects:
 
 iOS 8.4.1 Yalu Open Source Jailbreak Project: https://github.com/kpwn/yalu
 
@@ -20,8 +20,12 @@ iOS 10.12 jailbreak source code: https://github.com/kpwn/yalu102
 
 Local Privilege Escalation for macOS 10.12.2 and XNU port Feng Shui: https://github.com/zhengmin1989/macOS-10.12.2-Exp-via-mach_voucher
 
+incomplete iOS 10.2 jailbreak for 64 bit devices by qwertyoruiopz and marcograssi code:https://github.com/kpwn/yalu102
 
-### Bugs:
+Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_recipe
+
+
+### Bugs & Vulnerability:
 #### Local Privilege Esclation
 
 * MACOS 10.12.2 mach_voucher HeapOverFlow
@@ -33,5 +37,11 @@ https://jaq.alibaba.com/community/art/show?articleid=781
 iCloud OTR签名校验中第一步读取四个字节后返回值设为success，第二步在长度过短校验失败的情况下没有更新返回值直接返回，导致后续函数认为校验通过。攻击者可以通过中间人拦截解密icloud keychain以及其中的各种密码。 
 http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetype=weixin
 
+# Pwn2Own 2017
+## Pwn2own漏洞分享系列：利用macOS内核漏洞逃逸Safari沙盒
+http://blogs.360.cn/blog/pwn2own-using-macos-kernel-vuln-escape-from-safari-sandbox/
 Keep updating...please follow, thanks.
+### Vul1
+### Vul2
+
 
