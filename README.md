@@ -49,10 +49,10 @@ http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetyp
 https://zhuanlan.zhihu.com/p/25261296
 
 ## Linux kernel exploit
-A bunch of links related to Linux kernel fuzzing and exploitation
+* A bunch of links related to Linux kernel fuzzing and exploitation
 https://github.com/xairy/linux-kernel-exploitation
 
-linux-kernel-exploits Linux平台提取漏洞集合 https://www.sec-wiki.com
+* linux-kernel-exploits Linux平台提取漏洞集合 https://www.sec-wiki.com
 https://github.com/SecWiki/linux-kernel-exploits
 
 # JavaScript
