@@ -55,6 +55,10 @@ https://github.com/xairy/linux-kernel-exploitation
 * linux-kernel-exploits Linux平台提取漏洞集合 https://www.sec-wiki.com
 https://github.com/SecWiki/linux-kernel-exploits
 
+* Phoenix Talon 
+CVE-2017-8890本身是一个 double free 的问题，使用setsockopt()函数中MCAST_JOIN_GROUP选项，并调用accept()函数即可触发该漏洞。
+http://mp.weixin.qq.com/s/6NGH-Dk2n_BkdlJ2jSMWJQ
+
 # JavaScript
 ## Security
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
