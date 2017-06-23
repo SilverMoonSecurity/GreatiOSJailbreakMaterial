@@ -27,10 +27,22 @@ Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_
 
 ### Bugs & Vulnerability:
 #### Local Privilege Esclation
-*CVE-2016-4654
-Posted by PanGu, fixed in ios10.0 beta2
+* CVE-2016-4654, Posted by PanGu, fixed in ios10.0 beta2
 methodCall(IOMobileFramebuffer::swap_submit) in IOMobileFramebufferUserClient heap overflow
 
+* CVE-2016-4655 , is_io_registry_entry_get_property_bytes about OSNumber  to cause  Kernel Stack info leak
+
+* IOAccelResource2 video card interface bug
+ which is bridge the user mode application and vedio card
+ a. IOAccelResource2 OOM+double free bug, 
+ IOAccelResource2::newResourceWithIOSurfaceDeviceCache中不再对deviceCache进行release操作， fixed in iOS 10.0 beta 1
+ b. IOAccelResouce2 空指针引用漏洞
+ IOAccelSharedUserClient2::page_off_resource in IOAccelSharedUserClient2, fixed in ios 10.2
+ 
+* CVE-2016-7644, set_dp_control_port UAF
+* CVE-2017-2360 host_self_trap UAF
+  上述两个漏洞因，Port对象维护独立的Zone中，风水较难， ios 10.3以后类似漏洞几乎绝迹
+  
 * CVE-2017-2370 for ios 10.2
  Posted by Ian Beer, Project Zero in 2017-04-18
  Discovery and exploitation of CVE-2017-2370, a heap buffer overflow in the mach_voucher_extract_attr_recipe_trap mach trap.
@@ -52,6 +64,7 @@ https://jaq.alibaba.com/community/art/show?articleid=781
 iCloud OTR签名校验中第一步读取四个字节后返回值设为success，第二步在长度过短校验失败的情况下没有更新返回值直接返回，导致后续函数认为校验通过。攻击者可以通过中间人拦截解密icloud keychain以及其中的各种密码。 
 http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetype=weixin
 
+### Exploit mitigation:
 
 # Android
 ## Summary paper
