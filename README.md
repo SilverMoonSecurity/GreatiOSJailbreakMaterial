@@ -115,6 +115,9 @@ http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetyp
 （阿里云）开发者福利：史上最全Android 开发和安全系列工具
 https://zhuanlan.zhihu.com/p/25261296
 
+移动APP漏洞自动化检测平台建设
+https://security.tencent.com/index.php/blog/msg/109
+
 ## Android/Linux kernel exploit
 * A bunch of links related to Linux kernel fuzzing and exploitation
 https://github.com/xairy/linux-kernel-exploitation
@@ -129,6 +132,7 @@ http://mp.weixin.qq.com/s/6NGH-Dk2n_BkdlJ2jSMWJQ
 * Android wifi vulnerability POC 2016-2017
 Mosec 2017, POCs reported by 360 Qihook flankersky about Pixel xl(Qualcomm)and Android 6P(Broadcom)
 https://github.com/flankersky/android_wifi_pocs
+http://www.tuicool.com/articles/YnENFnu 漏洞挖掘之利用Broadcom的Wi-Fi栈（一）
 
 # JavaScript
 ## Security
