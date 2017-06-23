@@ -59,6 +59,10 @@ https://github.com/SecWiki/linux-kernel-exploits
 CVE-2017-8890本身是一个 double free 的问题，使用setsockopt()函数中MCAST_JOIN_GROUP选项，并调用accept()函数即可触发该漏洞。
 http://mp.weixin.qq.com/s/6NGH-Dk2n_BkdlJ2jSMWJQ
 
+* Android wifi vulnerability POC 2016-2017
+Mosec 2017, POCs reported by 360 Qihook flankersky about Pixel xl(Qualcomm)and Android 6P(Broadcom)
+https://github.com/flankersky/android_wifi_pocs
+
 # JavaScript
 ## Security
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
