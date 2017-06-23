@@ -27,7 +27,17 @@ Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_
 
 ### Bugs & Vulnerability:
 #### Local Privilege Esclation
+*CVE-2016-4654
+Posted by PanGu, fixed in ios10.0 beta2
+methodCall(IOMobileFramebuffer::swap_submit) in IOMobileFramebufferUserClient heap overflow
 
+* CVE-2017-2370 for ios 10.2
+ Posted by Ian Beer, Project Zero in 2017-04-18
+ Discovery and exploitation of CVE-2017-2370, a heap buffer overflow in the mach_voucher_extract_attr_recipe_trap mach trap.
+ https://googleprojectzero.blogspot.hk/2017/04/exception-oriented-exploitation-on-ios.html
+ https://bugs.chromium.org/p/project-zero/issues/detail?id=1004
+ https://bugs.chromium.org/p/project-zero/issues/detail?id=1004#c4
+ 
 * MACOS 10.12.2 mach_voucher HeapOverFlow
 https://jaq.alibaba.com/community/art/show?articleid=781
 
