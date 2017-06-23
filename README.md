@@ -27,10 +27,17 @@ Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_
 
 ### Bugs & Vulnerability:
 #### Local Privilege Esclation
+* IoconnectCallMethod condition race，fixed in iOS 10.2
+   CVE-2016-7624, CVE-2016-7625, CVE-2016-7714, CVE-2016-7620
+  当IOKit的IOConnectCallMethod中的inputStruct长度超过4096时，IOKit会将用户态内存映射到内核，作为用户输入数据：
+  -用户态和内核态的buffer共享同一物理内存
+  -用户态对buffer的修改会立即体现在内核态buffer上
+  -产生条件竞争问题
+  
 * CVE-2016-4654, Posted by PanGu, fixed in ios10.0 beta2
 methodCall(IOMobileFramebuffer::swap_submit) in IOMobileFramebufferUserClient heap overflow
 
-* CVE-2016-4655 , is_io_registry_entry_get_property_bytes about OSNumber  to cause  Kernel Stack info leak
+* CVE-2016-4655 , is_io_registry_entry_get_property_bytes about OSNumber  to cause  Kernel Stack info leak, fixed in iOS 10.0.1
 
 * IOAccelResource2 video card interface bug
  which is bridge the user mode application and vedio card
@@ -66,6 +73,43 @@ http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetyp
 
 ### Exploit mitigation:
 
+* 限制某些HeapSpray对象的创建数量
+  IOAccelResource2超过1000， 
+* 简化一些“危险”接口
+  is_io_service_open_extended 允许传入序列化数据并调用OSUnserializeXML做内存布局
+  Simplified in iOS 10.2.
+* enhance KPP/AMCC
+  -iOS 10 beta 2中内核Got表开始收KPP/AMCC保护
+  -PanGu 9.3.3中修改Got的方法被禁止， PE_i_can_has_debugger
+  -Luca iOS 10.1.1中AMCC绕过的方法被修补
+* 限制使用task_for_pid 0
+  - 获得 kernel task port 成了许多越狱的标配
+  - 特别是Ian Beer的mach_portal巧妙获取kernel task port
+  -iOS 10.3中对用户态进程使用kernel task port做了限制
+     --不允许任何用户态进程通过kernel task port读写内核内存
+     -- Ian beer mach_portal的内核利用被缓解
+  -  iOS 11中进一步限制APP读写其他进程内存
+     --Ian Beer用户态port劫持的方法被缓解
+*  64位SMAP的引入(iPhone 7)
+  - iOS 6中早已针对ARM机型将内核地址与用户态地址隔离
+     --内核空间无法访问用户态地址
+  -  而ARM64机型只有SMEP
+     -- 禁止内核态执行用户态地址的代码
+     -- 但内核态可以访问用户空间的地址
+  -  为ARM64内核漏洞利用提供便利
+     -- 省去了泄露内核堆地址的步骤
+     --例如： PanGu 9.3.3越狱， Yalu102越狱中都有访问用户态内存的环节
+  - iphone7后禁止内核态访问用户态空间内存
+     -- 对内核信息泄露有了更高的要求
+  
+*  Summary
+  - iOS 10，苹果极大加强了内核安全性
+  - 沙盒内的漏洞几乎绝迹
+    -- 今后越狱需要过沙盒+沙盒外内核漏洞的组合利用
+  - 对于一些经典漏洞，苹果更偏向以机制性的改进来彻底杜绝整类问题而不仅仅修复单一漏洞
+  - 苹果对一些常见利用手段进行缓解，使得漏洞利用变得更加困难
+  
+  
 # Android
 ## Summary paper
 （阿里云）开发者福利：史上最全Android 开发和安全系列工具
