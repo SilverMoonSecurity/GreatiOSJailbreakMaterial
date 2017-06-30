@@ -109,7 +109,11 @@ http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetyp
   - 对于一些经典漏洞，苹果更偏向以机制性的改进来彻底杜绝整类问题而不仅仅修复单一漏洞
   - 苹果对一些常见利用手段进行缓解，使得漏洞利用变得更加困难
   
-  
+ 
+# Windows
+## Summary paper
+ windows-kernel-exploits Windows平台提权漏洞集合  https://github.com/SecWiki/windows-kernel-exploits
+ 
 # Android
 ## Summary paper
 （阿里云）开发者福利：史上最全Android 开发和安全系列工具
