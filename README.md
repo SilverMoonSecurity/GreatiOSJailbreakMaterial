@@ -125,7 +125,21 @@ https://github.com/xairy/linux-kernel-exploitation
 * linux-kernel-exploits Linux平台提取漏洞集合 https://www.sec-wiki.com
 https://github.com/SecWiki/linux-kernel-exploits
 
-* Phoenix Talon 
+
+* CVE-2017-9445: Out-of-bounds write in systemd-resolved with crafted TCP payload (systemd)
+http://openwall.com/lists/oss-security/2017/06/27/8
+    Certain sizes passed to dns_packet_new can cause it to allocate a buffer
+that's too small. A page-aligned number - sizeof(DnsPacket) +
+sizeof(iphdr) + sizeof(udphdr) will do this - so, on x86 this will be a
+page-aligned number - 80. Eg, calling dns_packet_new with a size of 4016
+on x86 will result in an allocation of 4096 bytes, but 108 bytes of this
+are for the DnsPacket struct.
+    A malicious DNS server can exploit this by responding with a specially
+crafted TCP payload to trick systemd-resolved in to allocating a buffer
+that's too small, and subsequently write arbitrary data beyond the end
+of it.
+
+* CVE-2017-8890， Phoenix Talon about Socket of Linux
 CVE-2017-8890本身是一个 double free 的问题，使用setsockopt()函数中MCAST_JOIN_GROUP选项，并调用accept()函数即可触发该漏洞。
 http://mp.weixin.qq.com/s/6NGH-Dk2n_BkdlJ2jSMWJQ
 
