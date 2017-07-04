@@ -114,8 +114,11 @@ http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetyp
  
 # Windows
 ## Summary paper
- windows-kernel-exploits Windows平台提权漏洞集合  https://github.com/SecWiki/windows-kernel-exploits
+ * windows-kernel-exploits Windows平台提权漏洞集合  
+ https://github.com/SecWiki/windows-kernel-exploits
  
+ * Windows exploit POC
+ https://github.com/WindowsExploits/Exploits
 # Android
 ## Summary paper
 （阿里云）开发者福利：史上最全Android 开发和安全系列工具
