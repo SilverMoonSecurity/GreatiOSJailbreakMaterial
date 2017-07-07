@@ -166,6 +166,13 @@ Mosec 2017, POCs reported by 360 Qihook flankersky about Pixel xl(Qualcomm)and A
 https://github.com/flankersky/android_wifi_pocs
 http://www.tuicool.com/articles/YnENFnu 漏洞挖掘之利用Broadcom的Wi-Fi栈（一）
 
+# Virtual Machine
+## Vmware work station
+*  CVE-2017-4901, VMware Workstation and Fusion updates address critical out-of-bounds memory access vulnerability.
+VMware实现了多种虚拟机（下文称为guest）与宿主机（下文称文host）之间的通信方式。其中一种方式是通过一个叫做Backdoor的接口，这种方式的设计很有趣，guest只需在用户态就可以通过该接口发送命令。VMware Tools也部分使用了这种接口来和host通信。
+
+https://zhuanlan.zhihu.com/p/27733895?utm_medium=social&utm_source=wechat_timeline&from=timeline&isappinstalled=1
+
 # JavaScript
 ## Security
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
