@@ -26,6 +26,15 @@ Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_
 
 
 ### Bugs & Vulnerability:
+#### Safari bug
+*  CVE-2017-2533, theTOCTOU issue indiskarbitrationd
+*  CVE-2017-2534,a quirky configuration of the Speech Synthesis service which allows us toeasily execute arbitrary code in its context.
+*  CVE-2017-2535/ZDI-17-356, a logic issue in theApple Security framework that allows us to bypass the authorization sandbox
+
+https://github.com/phoenhex/files/tree/master/exploits/safari-sbx
+
+http://qbview.url.cn/getResourceInfo?appid=31&url=https%3A%2F%2Fphoenhex.re%2F2017-07-06%2Fpwn2own-sandbox-escape%3Fnsukey%3DWdZZ51ES0kgaC51Cs8s46wyep1xL%252FkMQ6oSrMP0Hsr2tbDsTgQMcKk%252FSDG7EJeckW2tIdcxvFu9M1kuz63NL8DPhtvFfC8gw%252F3BuUE5JmGVKQOck0ht0nwBEeqfzyuKiSDY09fW%252Fq%252Bv2nQkYqZhffLMymSgb%252F1fnxV3vXWjwMYEigXbUvJQbBEBeTeAd%252BGT2&version=10000&doview=1&ua=Mozilla%2F5.0+(Windows+NT+6.1%3B+WOW64)+AppleWebKit%2F537.36+(KHTML%2C+like+Gecko)+Chrome%2F39.0.2171.95+Safari%2F537.36+MicroMessenger%2F6.5.2.501+NetType%2FWIFI+WindowsWechat+QBCore%2F3.43.556.400+QQBrowser%2F9.0.2524.400&keeplink=0&reformat=0
+
 #### Local Privilege Esclation
 * IoconnectCallMethod condition race，fixed in iOS 10.2
    CVE-2016-7624, CVE-2016-7625, CVE-2016-7714, CVE-2016-7620
