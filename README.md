@@ -89,6 +89,13 @@ iOS 11 iCloud Bypass on iPad & iPhone - Huge Activation Lock Flaw
 iCloud OTR签名校验中第一步读取四个字节后返回值设为success，第二步在长度过短校验失败的情况下没有更新返回值直接返回，导致后续函数认为校验通过。攻击者可以通过中间人拦截解密icloud keychain以及其中的各种密码。 
 http://m.weibo.cn/status/4105419439985137?wm=3333_2001&from=1074193010&sourcetype=weixin
 
+### 
+* ? iOS 10.3, iCloud keychain protocol bug
+http://www.zdnet.com/article/icloud-security-flaw-icloud-keychain-iphone-mac-passwords-vulnerable/
+
+Before  iOS 10.3 
+我们知道什么字节进行翻转可以获得无效的签名，同时也可以获得许可，我们能够发送一个错误的签名，并修改协商报文，然后接收它。从设备中获得了一个许可，而这样他们就能以纯文本的形式看到Keychain中的所有东西。有了这个bug以后，我就就不需要直接去窃取iCloud Keychain了，只需要知道他们的帐户名称，我就可以访问他们的iCloud帐户了
+
 ### Exploit mitigation:
 
 * 限制某些HeapSpray对象的创建数量
