@@ -26,6 +26,18 @@ Exception-oriented exploitation by Ian Beer Code:https://github.com/xerub/extra_
 
 
 ### Bugs & Vulnerability:
+#### XPC bug
+*CVE-2017-7047 Fixed-2017-July-19
+    Many iOS/MacOS sandbox escapes/privescs due to unexpected shared memory-backed xpc_data objects
+    This is an exploit for CVE-2017-7047, a logic error in libxpc which allowed
+malicious message senders to send xpc_data objects that were backed by shared memory.
+Consumers of xpc messages did not seem to expect that the backing buffers of xpc_data objects
+could be modified by the sender whilst being processed by the receiver.
+
+    This project exploits CVE-2017-7047 to build a proof-of-concept remote lldb debugserver
+stub capable of attaching to and allowing the remote debugging all userspace
+processes on iOS 10.0 to 10.3.2.
+
 #### Safari bug
 *  CVE-2017-2533, theTOCTOU issue indiskarbitrationd
 *  CVE-2017-2534,a quirky configuration of the Speech Synthesis service which allows us toeasily execute arbitrary code in its context.
