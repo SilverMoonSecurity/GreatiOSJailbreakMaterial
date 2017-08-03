@@ -198,6 +198,10 @@ Mosec 2017, POCs reported by 360 Qihook flankersky about Pixel xl(Qualcomm)and A
 https://github.com/flankersky/android_wifi_pocs
 http://www.tuicool.com/articles/YnENFnu 漏洞挖掘之利用Broadcom的Wi-Fi栈（一）
 
+* CVE-2016-6738 Exp
+https://github.com/jiayy/android_vuln_poc-exp/tree/master/EXP-CVE-2016-6738
+
+
 # Virtual Machine
 ## Vmware work station
 *  CVE-2017-4901, VMware Workstation and Fusion updates address critical out-of-bounds memory access vulnerability.
