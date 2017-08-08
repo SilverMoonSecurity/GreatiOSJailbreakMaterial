@@ -225,6 +225,9 @@ VMware实现了多种虚拟机（下文称为guest）与宿主机（下文称文
 
 https://zhuanlan.zhihu.com/p/27733895?utm_medium=social&utm_source=wechat_timeline&from=timeline&isappinstalled=1
 
+* Vware drag and drop
+ZDI 之前分析了一个 VMware drag-and-drop 相关的 UAF 漏洞，这个漏洞通过一个叫做 "Backdoor" 的 RPC 接口触发，今天这篇 Blog ZDI 写了一个工具用于 Backdoor 接口的辅助分析、Fuzz 和 Exploit 开发： https://www.zerodayinitiative.com/blog/2017/8/1/pythonizing-the-vmware-backdoor
+
 # JavaScript
 ## Security
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
