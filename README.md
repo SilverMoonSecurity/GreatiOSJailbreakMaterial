@@ -201,6 +201,13 @@ http://www.tuicool.com/articles/YnENFnu 漏洞挖掘之利用Broadcom的Wi-Fi栈
 * CVE-2016-6738 Exp
 https://github.com/jiayy/android_vuln_poc-exp/tree/master/EXP-CVE-2016-6738
 
+* CVE-2017-10663, CVE-2017-10662, and CVE-2017-0750
+Vulnerability in F2FS File System Leads To Memory Corruption on Android, Linux
+CVE-2017-10663 is due to the absence of a buffer boundary check in the appropriate source code. 
+CVE-2017-10662 is an integer overflow.
+CVE-2017-0750 is also caused by the absence of a buffer boundary check.
+http://blog.trendmicro.com/trendlabs-security-intelligence/vulnerability-f2fs-file-system-leads-memory-corruption-android-linux/
+
 
 # Virtual Machine
 ## Vmware work station
@@ -214,5 +221,4 @@ https://zhuanlan.zhihu.com/p/27733895?utm_medium=social&utm_source=wechat_timeli
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
 
 Keep updating...please follow, thanks.
-
 
