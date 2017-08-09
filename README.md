@@ -232,5 +232,11 @@ ZDI 之前分析了一个 VMware drag-and-drop 相关的 UAF 漏洞，这个漏�
 ## Security
 * a javascript static security analysis tool Code:https://github.com/dpnishant/jsprime
 
+
+# Machine Learning
+## Summary
+* 人工智能之机器学习 machine-learning
+https://github.com/wangxiaoleiAI/machine-learning
+
 Keep updating...please follow, thanks.
 
