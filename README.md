@@ -98,6 +98,19 @@ https://jaq.alibaba.com/community/art/show?articleid=781
  http://blogs.360.cn/blog/pwn2own-using-macos-kernel-vuln-escape-from-safari-sandbox/
  
    360 Pwn2Own 2017比赛，用户态调用io_connect_get_notification_semaphore获取信号量后，可以销毁该信号量。此时，内核中vblSemaphore仍指向一个已经销毁释放的信号量对象。当用户态继续调用io_connect_get_notification_semaphore获取vblSemaphore并使用该信号量时，就会触发UAF（释放后使用）的情况。利用这个接口，我们可以把内核中 IOFramebuffer::getNotificationSemaphore的UAF问题，转化为内核地址信息泄漏和任意代码执行。
+   
+* CVE-2017-2357
+     Partial initialization。 The vulnerability lies in IOAudioFamilyvoid IOAudioControlUserClient::sendChangeNotification(UInt32 notificationType) (<= 204.4)。
+The kernel sends a message with 8 bytes kernel heap data to the user space.
+Source code:
+https://opensource.apple.com/source/IOAudioFamily/IOAudioFamily-204.4/
+
+
+* CVE-2017-2358
+A vcall is invoked blindly of uninitialized stack variable in function AMDRadeonX4000_AMDAccelShared::SurfaceCopy in MADRademonXx00.kext
+https://www.usenix.org/conference/woot17/workshop-program/presentation/xu
+
+
 #### iOS 11 iCloud Bypass Bug
 https://www.youtube.com/watch?v=U1cFcD-s48M&feature=youtu.be
 iOS 11 iCloud Bypass on iPad & iPhone - Huge Activation Lock Flaw
