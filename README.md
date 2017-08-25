@@ -28,6 +28,20 @@ iOS 10.3.2 XPC Userland Jailbreak Exploit Tutorial（CVE-2017-7047 ）的调试�
 
 iOS 越狱开发者 Siguza 和 tihmstar 今日正式发布了 iOS 9.3.5 不完美越狱：http://www.cnbeta.com/articles/tech/638919.htm
 
+Zimperium放出了iOS 10.3.1的内核漏洞的利用，配合P0的过沙盒漏洞可以做到内核的任意读写:
+https://github.com/doadam/ziVA
+这个漏洞利用所做的事情就是在沙盒外，利用三个内核驱动的漏洞获取内核任意读写的能力，并将自己的进程提权为root。
+1. 首先执行system("id");表明自己是普通的 mobile 用户。
+2. 然后调用offsets_init()获取一些偏移量，这里只获取了iPhone 6 10.2的偏移量，想要其他的机型和版本的话，还要自己去计算。
+3. initialize_iokit_connections()所做的是初始化一些 iokit userclient，包括AppleAVEDriver以及IOSurfaceRoot。
+4. heap_spray_init()是堆喷前的准备，这里用到了一种新的堆风水姿势：利用伪造的sysctl buffer和 IOSurface的external method来进行堆喷。
+5. kernel_read_leak_kernel_base()首先利用了AppleAVE.kext的CVE-2017-6989内核信息泄露洞获取了IOSurface对象在内核堆上的地址，然后利用IOSurface的一个race condition漏洞（貌似是CVE-2017-6979）获取了IOFence的vtable，从而计算出kernel slide。
+6. offsets_set_kernel_base()和heap_spray_start_spraying()分别设置了kernel base和并根据计算出来的 kernel slide构造rop并进行了堆喷。
+7. apple_ave_pwn_use_fake_iosurface()利用了AppleAVE.kext的CVE-2017-6995类型混淆漏洞来伪造 iosurface对象控制pc，做到内核内存的任意读写。
+8. test_rw_and_get_root()利用内核内存的任意读写修改内核堆中的credentials信息，并将自己的进程提升为 root 权限。
+9. 最后再执行一次 system("id");证明exp成功获取了 root 权限。
+
+
 ### Bugs & Vulnerability:
 #### XPC bug
 *CVE-2017-7047 Fixed-2017-July-19
