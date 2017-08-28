@@ -8,6 +8,11 @@ weibo@ http://weibo.com/zhengmin1989
 
 ## Jail Break Projects:
 
+### Summary
+Stefan Esser 在 HITB 会议关于私有 iOS 越狱（Private iOS Jailbreak）历史的剖析：
+http://gsec.hitb.org/materials/sg2017/COMMSEC%20D1%20-%20Stefan%20Esser%20-%20The%20Original%20Elevat0r.pdf
+
+
 iOS 8.4.1 Yalu Open Source Jailbreak Project: https://github.com/kpwn/yalu
 
 OS-X-10.11.6-Exp-via-PEGASUS: https://github.com/zhengmin1989/OS-X-10.11.6-Exp-via-PEGASUS
@@ -43,6 +48,14 @@ https://github.com/doadam/ziVA
 
 
 ### Bugs & Vulnerability:
+#### Attack Interface
+* AppleAVEDriver
+  iOS 系统中的视频解码内核扩展 - AppleAVEDriver 缺少安全防御，存在多处漏洞：
+https://threatpost.com/security-lacking-in-previous-appleavedriver-ios-kernel-extension/127624/
+*  iOS 沙箱攻击界面和漏洞的分析
+   Ro(o)tten Apples - 来自 Adam Donenfeld 在 HITB 会议关于 iOS 沙箱攻击界面和漏洞的分析：
+http://gsec.hitb.org/materials/sg2017/D2%20-%20Adam%20Donenfeld%20-%20Ro(o)tten%20Apples%20-%20Vulnerability%20Heaven%20in%20the%20iOS%20Sandbox.pdf
+
 #### XPC bug
 *CVE-2017-7047 Fixed-2017-July-19
     Many iOS/MacOS sandbox escapes/privescs due to unexpected shared memory-backed xpc_data objects
@@ -250,6 +263,12 @@ http://blog.trendmicro.com/trendlabs-security-intelligence/vulnerability-f2fs-fi
 
 
 # Virtual Machine
+## Qemu
+
+* QEMU 的安全内幕与攻击界面分析
+
+来自 Qiang Li 和 Zhibin Hu 在 HITB 会议的演讲：http://gsec.hitb.org/materials/sg2017/D2%20-%20Qiang%20Li%20and%20ZhiBin%20Hu%20-%20QEMU%20Attack%20Surface%20and%20Security%20Internals.pdf
+
 ## Vmware work station
 *  CVE-2017-4901, VMware Workstation and Fusion updates address critical out-of-bounds memory access vulnerability.
 VMware实现了多种虚拟机（下文称为guest）与宿主机（下文称文host）之间的通信方式。其中一种方式是通过一个叫做Backdoor的接口，这种方式的设计很有趣，guest只需在用户态就可以通过该接口发送命令。VMware Tools也部分使用了这种接口来和host通信。
