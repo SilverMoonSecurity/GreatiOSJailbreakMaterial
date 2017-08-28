@@ -56,6 +56,10 @@ stub capable of attaching to and allowing the remote debugging all userspace
 processes on iOS 10.0 to 10.3.2.
 
 #### Safari bug
+*  CVE-2017-2547, exists thanks to the way bounds checks for Arrays are handled within one of the optimization layers in JavaScriptCore.
+   a vulnerability in Webkit that was used as part of Tencent Team Sniper's Pwn2Own 2017 entry against Apple Safari.
+   https://www.zerodayinitiative.com/blog/2017/8/24/deconstructing-a-winning-webkit-pwn2own-entry
+   
 *  CVE-2017-2533, theTOCTOU issue indiskarbitrationd
 *  CVE-2017-2534,a quirky configuration of the Speech Synthesis service which allows us toeasily execute arbitrary code in its context.
 *  CVE-2017-2535/ZDI-17-356, a logic issue in theApple Security framework that allows us to bypass the authorization sandbox
