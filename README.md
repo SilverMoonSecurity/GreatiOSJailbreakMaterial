@@ -198,7 +198,11 @@ Many iOS/MacOS sandbox escapes/privescs due to unexpected shared memory-backed x
     -- 今后越狱需要过沙盒+沙盒外内核漏洞的组合利用
   - 对于一些经典漏洞，苹果更偏向以机制性的改进来彻底杜绝整类问题而不仅仅修复单一漏洞
   - 苹果对一些常见利用手段进行缓解，使得漏洞利用变得更加困难
-  
+
+#### iCloud,FaceTime 撞库
+从已知后门的社工库中提取了注册邮箱和密码的先用此方式校验邮箱是否用于iCloud，如果有效再进入下一轮测试密码，如果密码正确且无二次验证立马锁定
+https://m.weibo.cn/status/4146130370093110?wm=3333_2001&from=1078193010&sourcetype=weixin&featurecode=newtitle 
+
  
 # Windows
 ## Summary paper
