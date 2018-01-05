@@ -52,9 +52,16 @@ weibo@ http://weibo.com/zhengmin1989
 ## Jail Break Projects:
 
 ### Summary
+
+iOS jail brek summany github
+https://github.com/Jailbreaks
+
 Stefan Esser 在 HITB 会议关于私有 iOS 越狱（Private iOS Jailbreak）历史的剖析：
 http://gsec.hitb.org/materials/sg2017/COMMSEC%20D1%20-%20Stefan%20Esser%20-%20The%20Original%20Elevat0r.pdf
 
+iOS 11.1.2 wip jailbreak https://github.com/iabem97/topanga
+
+iOS 11.1.2 async_wake_ios, kernel exploit and PoC local kernel debugger  https://bugs.chromium.org/p/project-zero/issues/detail?id=1417#c3
 
 iOS 8.4.1 Yalu Open Source Jailbreak Project: https://github.com/kpwn/yalu
 
