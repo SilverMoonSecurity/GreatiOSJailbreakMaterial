@@ -1,6 +1,11 @@
 # CPU
 ## Meltdown and Spectre
 ### Summary
+   
+   Variant 1: bounds check bypass (CVE-2017-5753)
+   Variant 2: branch target injection (CVE-2017-5715)
+   Variant 3: rogue data cache load (CVE-2017-5754)
+
    In order to improve performance, many CPUs may choose to speculatively execute instructions based on assumptions that 
 are considered likely to be true. During speculative execution, the processor is verifying these assumptions; if they 
 are valid, then the execution continues. If they are invalid, then the execution is unwound, and the correct execution 
@@ -21,6 +26,10 @@ https://security.googleblog.com/2018/01/todays-cpu-vulnerability-what-you-need.h
 
 * 处理器A级漏洞Meltdown(熔毁)和Spectre(幽灵)分析报告  
 https://mp.weixin.qq.com/s/2FvvFUT8taRPv6GOHzNW-g 
+
+### Example of using revealed "Spectre" exploit (CVE-2017-5753 and CVE-2017-5715) 
+ https://github.com/Eugnis/spectre-attack/ 
+
 
 
 ## 利用CPU推测执行侧信道攻击KASLR
