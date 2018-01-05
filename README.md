@@ -1,3 +1,25 @@
+#CPU
+##Meltdown and Spectre
+### Summary
+   In order to improve performance, many CPUs may choose to speculatively execute instructions based on assumptions that 
+are considered likely to be true. During speculative execution, the processor is verifying these assumptions; if they 
+are valid, then the execution continues. If they are invalid, then the execution is unwound, and the correct execution 
+path can be started based on the actual conditions. It is possible for this speculative execution to have side effects 
+which are not restored when the CPU state is unwound, and can lead to information disclosure.
+
+* Topic website
+https://spectreattack.com/
+
+* Arm CPU Vulnerability of Speculative Processors to Cache Timing Side-Channel Mechanism
+https://developer.arm.com/support/security-update
+
+* Today's CPU vulnerability: what you need to know
+https://googleprojectzero.blogspot.hk/2018/01/reading-privileged-memory-with-side.html
+
+* Reading privileged memory with a side-channel
+https://security.googleblog.com/2018/01/todays-cpu-vulnerability-what-you-need.html?m=1
+
+
 # ios/MacOS
 
 twitter@ http://twitter.com/Flyic
