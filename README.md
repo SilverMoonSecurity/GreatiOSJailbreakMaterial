@@ -1,5 +1,5 @@
-#CPU
-##Meltdown and Spectre
+# CPU
+## Meltdown and Spectre
 ### Summary
    In order to improve performance, many CPUs may choose to speculatively execute instructions based on assumptions that 
 are considered likely to be true. During speculative execution, the processor is verifying these assumptions; if they 
