@@ -18,7 +18,7 @@ https://spectreattack.com/
 * Arm CPU Vulnerability of Speculative Processors to Cache Timing Side-Channel Mechanism
 https://developer.arm.com/support/security-update
 
-* Today's CPU vulnerability: what you need to know
+* Reading privileged memory with a side-channel
 https://googleprojectzero.blogspot.hk/2018/01/reading-privileged-memory-with-side.html
 
 * Reading privileged memory with a side-channel
