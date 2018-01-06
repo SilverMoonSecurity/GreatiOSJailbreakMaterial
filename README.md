@@ -32,6 +32,7 @@ https://mp.weixin.qq.com/s/2FvvFUT8taRPv6GOHzNW-g
  
  ### Meltdown/Spectre JavaScript Exploit Example Code
  https://react-etc.net/page/meltdown-spectre-javascript-exploit-example
+ https://react-etc.net/entry/exploiting-speculative-execution-meltdown-spectre-via-javascript
 
 
 
