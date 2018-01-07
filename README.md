@@ -29,11 +29,15 @@ https://mp.weixin.qq.com/s/2FvvFUT8taRPv6GOHzNW-g
 
 ### Example of using revealed "Spectre" exploit (CVE-2017-5753 and CVE-2017-5715) 
  https://github.com/Eugnis/spectre-attack/ 
- 
- ### Meltdown/Spectre JavaScript Exploit Example Code
+
+### Meltdown/Spectre JavaScript Exploit Example Code
  https://react-etc.net/page/meltdown-spectre-javascript-exploit-example
  https://react-etc.net/entry/exploiting-speculative-execution-meltdown-spectre-via-javascript
 
+### Meltdown exploit
+https://github.com/paboldin/meltdown-exploit
+
+https://github.com/dendisuhubdy/meltdown
 
 
 ## 利用CPU推测执行侧信道攻击KASLR
