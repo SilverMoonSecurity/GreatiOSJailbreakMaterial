@@ -35,6 +35,7 @@ https://mp.weixin.qq.com/s/2FvvFUT8taRPv6GOHzNW-g
  https://react-etc.net/entry/exploiting-speculative-execution-meltdown-spectre-via-javascript
 
 ### Meltdown exploit
+Leak kernel variable "linux_proc_banner" content on x86/x84 CPU Linux (including VM)
 https://github.com/paboldin/meltdown-exploit
 
 https://github.com/dendisuhubdy/meltdown
