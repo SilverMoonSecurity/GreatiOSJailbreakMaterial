@@ -36,18 +36,22 @@ https://adc.github.trendmicro.com/CoreTech-MTRT/PoC/blob/master/spectre_CVE-2017
 
 ### Meltdown exploit
 * Intel x86/x84
+
 Leak kernel variable "linux_proc_banner" content on x86/x84 CPU Linux (including VM)
 https://github.com/paboldin/meltdown-exploit
 
 https://github.com/dendisuhubdy/meltdown
 
 * AArch64 arm64  
+
 Dump privileged ARM system registers from usermode using variant 3a of Meltdown
 https://github.com/lgeek/spec_poc_arm
 
 
 ### JavaScript
+
 * Spectre (Only effective on Intel x86/x64)
+
 https://github.com/cgvwzq/spectre
 
  https://react-etc.net/page/meltdown-spectre-javascript-exploit-example
