@@ -31,6 +31,8 @@ https://mp.weixin.qq.com/s/2FvvFUT8taRPv6GOHzNW-g
 * Intel x86/x84
  https://github.com/Eugnis/spectre-attack/ 
 
+* Arm
+https://adc.github.trendmicro.com/CoreTech-MTRT/PoC/blob/master/spectre_CVE-2017-5753/Source.c 
 
 ### Meltdown exploit
 * Intel x86/x84
