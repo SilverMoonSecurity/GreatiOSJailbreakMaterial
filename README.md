@@ -40,6 +40,9 @@ https://adc.github.trendmicro.com/CoreTech-MTRT/PoC/blob/master/spectre_CVE-2017
 Leak kernel variable "linux_proc_banner" content on x86/x84 CPU Linux (including VM)
 https://github.com/paboldin/meltdown-exploit
 
+Leak system call table on Linux of Intel
+https://github.com/raphaelsc/Am-I-affected-by-Meltdown
+
 https://github.com/dendisuhubdy/meltdown
 
 * AArch64 arm64  
