@@ -58,7 +58,7 @@ https://github.com/cgvwzq/spectre
  https://react-etc.net/entry/exploiting-speculative-execution-meltdown-spectre-via-javascript
 
 
-## 利用CPU推测执行侧信道攻击KASLR
+### 利用CPU推测执行侧信道攻击KASLR
   KASLR的原理是在内核的基址上增加一个slide，让攻击者无法猜测内核在内存中的位置。但是内核肯定是被映射到物理页面上的，因此我们可以使用预取指令去遍历内核可能的起始地址，如果执行预取指令的时间突然变短，就说明我们猜中了内核的起始地址。
 
 * 破解macOS 10.13 KASLR的POC
@@ -66,6 +66,10 @@ https://pastebin.com/GSfJY72J
 
 https://media.weibo.cn/article?id=2309404192549521743410&jumpfrom=weibocom&from=timeline&isappinstalled=0
 
+
+### Intelligence
+* All apple devices are affected
+ https://support.apple.com/en-us/HT208394
 
 # ios/MacOS
 
